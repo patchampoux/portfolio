@@ -21,11 +21,11 @@
         }
 
         body {
-            background:url(../images/build/logo-ptmp.png) no-repeat center center #fff;
+            background:url(images/build/logo-ptmp.png) no-repeat center center #fff;
         }
     </style>
 
-    <link rel="shortcut icon" href="../images/icons/favicon.ico">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
 </head>
 <body>
     
