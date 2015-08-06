@@ -51,7 +51,7 @@ form {
 		margin-top:-10px;
 		width:100%;
 
-		@media (min-width: $screen-md-min) {
+		@media (min-width: $screen-sm-min) {
 			text-align:right;
 		}
 	}
@@ -65,11 +65,15 @@ form {
 		padding-right:16px;
 		vertical-align:top;
 
-		@media (min-width: $screen-md-min) {
+		@media (min-width: $screen-sm-min) {
 			display:inline-block;
-			font-size:18px;
+
 			line-height:50px;
 			margin-bottom:0;
+		}
+
+		@media (min-width: $screen-md-min) {
+			font-size:18px;
 		}
 	}
 }
