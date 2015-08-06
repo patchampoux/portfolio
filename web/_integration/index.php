@@ -201,7 +201,7 @@ include '_header.php';
 </section>
 <section id="contact" class="contact site-padding">
 	<div class="container-fluid">
-		<h2 class="h1 reverse text-center">Contact<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+		<h1 class="reverse text-center">Contact<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h1>
 		<div class="row">
 			<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
 				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>

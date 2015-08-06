@@ -5,7 +5,7 @@
 <!--[if gt IE 9]><!--> <html lang="fr">          <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>pat.champoux | développeur web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -30,7 +30,7 @@
 <div id="site-wrapper">
     <header id="header" class="site-padding">
         <div class="container-fluid clearfix">
-            <a href="#" class="brand"><img src="logo.png" alt="pat.champoux | développeur web"></a>
+            <a href="#" class="brand"><img src="images/logo@2x.png" alt="pat.champoux | développeur web" height="128" width="150"></a>
             <nav id="navigation">
                 <ul class="social list-inline list-unstyled text-center">
                     <li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
