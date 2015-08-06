@@ -15,6 +15,9 @@
 		</div>
     </footer>
 </div>
+
+<script>if ( typeof window.JSON === 'undefined' ) { document.write('<script src="../scripts/uncompressed/json2.js"><\/script>'); }</script>
+<script src="js/plugins/jquery.input-placeholder-polyfill.min.js"></script> <!-- http://osvaldas.info/placeholder-polyfill-with-password-support -->
 <script src="js/main.js"></script>
 </body>
 </html>

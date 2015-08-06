@@ -99,6 +99,9 @@
 
 // Placeholder text
 @mixin placeholder($color: $input-color-placeholder) {
+    &.is-placeholder {
+        color: $color;
+    }
   // Firefox
   &::-moz-placeholder {
     color: $color;

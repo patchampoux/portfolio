@@ -37,9 +37,9 @@
                     <li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
                 </ul>
                 <ul class="primary list-unstyled text-center">
-                    <li><a href="#">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                    <li><a href="#">À propos <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                    <li><a href="#">Contact <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#realisations">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#a-propos">À propos <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#contact">Contact <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
                 </ul>
             </nav>
         </div>
