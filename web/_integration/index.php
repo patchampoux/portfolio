@@ -114,7 +114,7 @@ include '_header.php';
 					</div>
 				</article>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
@@ -132,7 +132,7 @@ include '_header.php';
 					</div>
 				</article>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
