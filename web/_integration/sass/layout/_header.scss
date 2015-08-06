@@ -1,0 +1,23 @@
+#header {
+	background:url('../images/bg-header-rep.png') repeat-x center 0 #fff;
+	padding-bottom:75px;
+	padding-top:30px;
+	position:relative;
+	text-align:center;
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom:90px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		height:248px;
+		padding-bottom:0;
+		padding-top:60px;
+	}
+
+	.brand {
+		@media (min-width: $screen-md-min) {
+			float:left;
+		}
+	}
+}

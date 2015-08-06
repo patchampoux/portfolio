@@ -1,0 +1,7 @@
+.idea
+.sass-cache
+_notes
+.DS_Store
+docs
+config.codekit
+.codekit-cache
