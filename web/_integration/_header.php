@@ -29,24 +29,6 @@
 </head>
 
 <body class="<?=$section.'_section';?>">
-<header id="fixed-header" class="site-padding">
-    <div class="container-fluid clearfix">
-        <img src="images/logo@2x.png" alt="pat.champoux | développeur web" height="128" width="150" class="brand">
-        <a href="#" class="brand"><img src="images/logo-min@2x.png" alt="pat.champoux | développeur web" height="49" width="76"></a>
-        <a href="#" class="btn-mnav hidden-lg"><span></span><span></span><span></span></a>
-        <nav class="navigation" role="navigation">
-            <ul class="social list-inline list-unstyled text-center">
-                <li><a href="https://github.com/patchampoux" target="_blank"><i class="icon-github"></i></a></li>
-                <li><a href="https://ca.linkedin.com/pub/patrick-champoux/98/50/499" target="_blank"><i class="icon-linkedin"></i></a></li>
-            </ul>
-            <ul class="primary list-unstyled text-center">
-                <li><a href="#realisations" data-state="1">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                <li><a href="#a-propos" data-state="2">À propos <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                <li><a href="#contact" data-state="3">Contact <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <div id="site-wrapper">
     <div id="site-indent">
         <header id="header" class="site-padding">

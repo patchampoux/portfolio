@@ -14,12 +14,15 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
+		<div id="mnav-overlay"></div>
 </div>
 
 <script src="js/plugins/jquery.easing.1.3.min.js"></script> <!-- http://gsgd.co.uk/sandbox/jquery/easing/ -->
 <script src="js/plugins/jquery.history.min.js"></script> <!-- https://github.com/browserstate/history.js/ -->
 <script src="js/plugins/jquery.input-placeholder-polyfill.min.js"></script> <!-- http://osvaldas.info/placeholder-polyfill-with-password-support -->
+<script src="js/plugins/jquery.touchSwipe.min.js"></script> <!-- https://github.com/mattbryson/TouchSwipe-Jquery-Plugin -->
 <script src="js/main.js"></script>
 </body>
 </html>

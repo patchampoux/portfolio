@@ -37,7 +37,7 @@
 	left:0;
 	position:fixed;
 	top:-100px;
-	transition:left 200ms, top 200ms;
+	transition:left 300ms, top 200ms;
 	width:100%;
 	z-index:99999;
 
@@ -52,7 +52,7 @@
 	a.brand {
 		display:inline-block;
 		float:left;
-		margin:12px 0 0 37px;
+		margin:12px 0 0;
 	}
 
 	.btn-mnav {

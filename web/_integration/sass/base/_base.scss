@@ -34,8 +34,10 @@ body {
 }
 
 #site-indent {
-	transition:margin-left 200ms;
+	position:relative;
+	transition:margin-left 300ms;
 	width:100%;
+	z-index:1;
 }
 
 .mnav-open {

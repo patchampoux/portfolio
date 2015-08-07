@@ -1,5 +1,7 @@
 /* Global variables */
-var $window = $(window);
+var $window = $(window),
+	$body = $('body'),
+	resizeTimer;
 
 /* History.js change url on scroll and on nav click */
 $(document).ready(function() {
@@ -13,7 +15,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-	$navLinks.on('click touchstart', function(e) {
+	$body.on('click touchstart', '.navigation .primary a', function(e) {
 		var $this = $(this),
 			url = $this.attr('href'),
 			elementTop = $(url).offset().top;
@@ -24,7 +26,7 @@ $(document).ready(function() {
 	});
 
 	function setActiveLink(state) {
-		$navLinks.each(function() {
+		$('.navigation .primary a').each(function() {
 			var $this = $(this);
 
 			if($this.data('state') === state && !$this.hasClass('active')) {
@@ -128,16 +130,14 @@ $(document).ready(function() {
 	if(!$('html').hasClass('no-touch')) {
 		var $items = $('.portfolio').find('.item');
 
-		$items.on('click touchstart', function() {
+		$items.on('click', function(e) {
 			var $this = $(this);
 
-			if($this.hasClass('hover')) {
-				$this.removeClass('hover');
-			} else {
-				$items.removeClass('hover');
+			this.classList.toggle('hover');
 
-				$this.addClass('hover');
-			}
+			$this.parent().siblings().find('.item').removeClass('hover');
+
+			e.preventDefault();
 		});
 	}
 });
@@ -146,9 +146,11 @@ $(document).ready(function() {
 /* Fixed and mobile nav */
 $(document).ready(function() {
 	var scrolled = $window.scrollTop(),
-		$fixedHeader = $('#fixed-header'),
+		$header = $('#header'),
+		$fixedHeader = $('<header id="fixed-header" class="site-padding"></header>').html($header.html()).prependTo('body'),
 		$btnMnav = $('.btn-mnav'),
-		headerHeight = $('#header').outerHeight();
+		headerHeight = $header.outerHeight(),
+		$mnavOverlay = $('#mnav-overlay');
 
 	function showFixedNav() {
 		$fixedHeader.addClass('visible');
@@ -156,6 +158,14 @@ $(document).ready(function() {
 
 	function hideFixedNav() {
 		$fixedHeader.removeClass('visible');
+	}
+
+	function openMnav() {
+		$body.addClass('unscroll mnav-open');
+	}
+
+	function closeMnav() {
+		$body.removeClass('unscroll mnav-open');
 	}
 
 	if(scrolled >= headerHeight && !$fixedHeader.hasClass('visible')) {
@@ -172,6 +182,67 @@ $(document).ready(function() {
 			showFixedNav();
 		} else if(scrolled < headerHeight && $fixedHeader.hasClass('visible')) {
 			hideFixedNav();
+		}
+
+		if(scrolled < headerHeight && $body.hasClass('mnav-open')) {
+			closeMnav();
+		}
+	});
+
+	$window.on('resize', function() {
+		clearTimeout(resizeTimer);
+
+		resizeTimer = setTimeout(function() {
+			scrolled = $window.scrollTop();
+			headerHeight = $('#header').outerHeight();
+
+			if(scrolled >= headerHeight && !$fixedHeader.hasClass('visible')) {
+				showFixedNav();
+			} else if(scrolled < headerHeight && $fixedHeader.hasClass('visible')) {
+				hideFixedNav();
+			}
+
+			if(scrolled < headerHeight && $body.hasClass('mnav-open')) {
+				closeMnav();
+			}
+		}, 100);
+	});
+
+	$btnMnav.on('click', function(e) {
+		if($body.hasClass('mnav-open')) {
+			closeMnav();
+		} else {
+			openMnav();
+		}
+
+		e.preventDefault();
+	});
+
+	$mnavOverlay.on('click', function() {
+		closeMnav();
+	});
+
+	$('#fixed-header').find('.navigation .primary a').on('click touchstart', function() {
+		setTimeout(function() {
+			closeMnav();
+		}, 1100);
+	});
+
+	$('#fixed-header').find('.navigation').swipe( {
+		//Generic swipe handler for all directions
+		swipe:function(event, direction) {
+			if(direction === 'right') {
+				closeMnav();
+			}
+		}
+	});
+
+	$mnavOverlay.swipe( {
+		//Generic swipe handler for all directions
+		swipe:function(event, direction) {
+			if(direction === 'right') {
+				closeMnav();
+			}
 		}
 	});
 });
