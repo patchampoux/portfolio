@@ -5,11 +5,10 @@ var $window = $(window),
 
 /* History.js change url on scroll and on nav click */
 $(document).ready(function() {
-	var $brandLink = $('a.brand'),
-		$navLinks = $('.navigation').find('.primary a'),
+	var $navLinks = $('.navigation').find('.primary a'),
 		siteTitle = $('title').text();
 
-	$brandLink.on('click touchstart', function(e) {
+	$body.on('click touchstart', 'a.brand', function(e) {
 		$("html, body").animate({ scrollTop: 0 }, 1000, 'easeInOutCubic');
 
 		e.preventDefault();
