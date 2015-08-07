@@ -7,7 +7,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<ul class="social list-inline list-unstyled text-center">
-						<li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+						<li><a href="https://github.com/patchampoux" target="_blank"><i class="icon-github"></i></a></li>
 						<li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
 					</ul>
 				</div>

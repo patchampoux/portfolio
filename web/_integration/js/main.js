@@ -18,10 +18,24 @@ $(document).ready(function() {
 			url = $this.attr('href'),
 			elementTop = $(url).offset().top;
 
-		$("html, body").animate({ scrollTop: $(url).offset().top }, 1000 - ((elementTop * 10) / 100), 'easeInOutCubic');
+		$("html, body").animate({ scrollTop: elementTop }, 1000, 'easeInOutCubic');
 
 		e.preventDefault();
 	});
+
+	function setActiveLink(state) {
+		$navLinks.each(function() {
+			var $this = $(this);
+
+			if($this.data('state') === state && !$this.hasClass('active')) {
+				$navLinks.removeClass('active');
+
+				$this.addClass('active');
+			} else if(state === 0) {
+				$navLinks.removeClass('active');
+			}
+		});
+	}
 
 	function goToSection() {
 		var url = window.location.href,
@@ -38,23 +52,33 @@ $(document).ready(function() {
 		if(sectionUrl === 'accueil') {
 			History.replaceState({state:0}, siteTitle, "?section=accueil");
 
-			$("html, body").animate({ scrollTop: 0 }, 0);
+			setActiveLink(0);
+
+			$("html, body").scrollTop(0);
 		} else if(sectionUrl === 'realisations') {
 			History.replaceState({state:1}, "Réalisations | " + siteTitle, "?section=realisations");
 
-			$("html, body").animate({ scrollTop: $('#realisations').offset().top }, 0);
+			setActiveLink(1);
+
+			$("html, body").scrollTop($('#realisations').offset().top);
 		} else if(sectionUrl === 'a-propos') {
 			History.replaceState({state:2}, "À propos | " + siteTitle, "?section=a-propos");
 
-			$("html, body").animate({ scrollTop: $('#a-propos').offset().top }, 0);
+			setActiveLink(2);
+
+			$("html, body").scrollTop($('#a-propos').offset().top);
 		} else if(sectionUrl === 'contact') {
 			History.replaceState({state:2}, "Contact | " + siteTitle, "?section=a-propos");
 
-			$("html, body").animate({ scrollTop: $('#contact').offset().top }, 0);
+			setActiveLink(3);
+
+			$("html, body").scrollTop($('#contact').offset().top);
 		} else {
 			History.replaceState({state:0}, siteTitle, "?section=accueil");
 
-			$("html, body").animate({ scrollTop: 0 }, 0);
+			setActiveLink(0);
+
+			$("html, body").scrollTop(0);
 		}
 	}
 
@@ -68,18 +92,26 @@ $(document).ready(function() {
 
 		if(scrolled >= 0 && scrolled < realisationsOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			History.replaceState({state:0}, siteTitle, "?section=accueil");
+
+			setActiveLink(0);
 		}
 
 		if(scrolled >= realisationsOT && scrolled < aboutOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			History.replaceState({state:1}, "Réalisations | " + siteTitle, "?section=realisations");
+
+			setActiveLink(1);
 		}
 
 		if(scrolled >= aboutOT && scrolled < contactOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			History.replaceState({state:2}, "À propos | " + siteTitle, "?section=a-propos");
+
+			setActiveLink(2);
 		}
 
 		if(scrolled >= contactOT || scrolled >= siteHeight - (windowHeight + 100)) {
 			History.replaceState({state:3}, "Contact | " + siteTitle, "?section=contact");
+
+			setActiveLink(3);
 		}
 	}
 
@@ -88,6 +120,26 @@ $(document).ready(function() {
 	$window.on('scroll', function() {
 		setSate();
 	});
+});
+
+
+/* On touch realisations */
+$(document).ready(function() {
+	if(!$('html').hasClass('no-touch')) {
+		var $items = $('.portfolio').find('.item');
+
+		$items.on('click touchstart', function() {
+			var $this = $(this);
+
+			if($this.hasClass('hover')) {
+				$this.removeClass('hover');
+			} else {
+				$items.removeClass('hover');
+
+				$this.addClass('hover');
+			}
+		});
+	}
 });
 
 
