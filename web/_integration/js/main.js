@@ -50,31 +50,31 @@ $(document).ready(function() {
 		}
 
 		if(sectionUrl === 'accueil') {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
+			History.replaceState({state:0}, "", "?section=accueil");
 
 			setActiveLink(0);
 
 			$("html, body").scrollTop(0);
 		} else if(sectionUrl === 'realisations') {
-			History.replaceState({state:1}, "Réalisations | " + siteTitle, "?section=realisations");
+			History.replaceState({state:1}, "", "?section=realisations");
 
 			setActiveLink(1);
 
 			$("html, body").scrollTop($('#realisations').offset().top);
 		} else if(sectionUrl === 'a-propos') {
-			History.replaceState({state:2}, "À propos | " + siteTitle, "?section=a-propos");
+			History.replaceState({state:2}, "", "?section=a-propos");
 
 			setActiveLink(2);
 
 			$("html, body").scrollTop($('#a-propos').offset().top);
 		} else if(sectionUrl === 'contact') {
-			History.replaceState({state:2}, "Contact | " + siteTitle, "?section=a-propos");
+			History.replaceState({state:2}, "", "?section=a-propos");
 
 			setActiveLink(3);
 
 			$("html, body").scrollTop($('#contact').offset().top);
 		} else {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
+			History.replaceState({state:0}, "", "?section=accueil");
 
 			setActiveLink(0);
 
@@ -140,6 +140,40 @@ $(document).ready(function() {
 			}
 		});
 	}
+});
+
+
+/* Fixed and mobile nav */
+$(document).ready(function() {
+	var scrolled = $window.scrollTop(),
+		$fixedHeader = $('#fixed-header'),
+		$btnMnav = $('.btn-mnav'),
+		headerHeight = $('#header').outerHeight();
+
+	function showFixedNav() {
+		$fixedHeader.addClass('visible');
+	}
+
+	function hideFixedNav() {
+		$fixedHeader.removeClass('visible');
+	}
+
+	if(scrolled >= headerHeight && !$fixedHeader.hasClass('visible')) {
+		showFixedNav();
+	} else if(scrolled < headerHeight && $fixedHeader.hasClass('visible')) {
+		hideFixedNav();
+	}
+
+	$window.on('scroll', function() {
+		scrolled = $window.scrollTop();
+		headerHeight = $('#header').outerHeight();
+
+		if(scrolled >= headerHeight && !$fixedHeader.hasClass('visible')) {
+			showFixedNav();
+		} else if(scrolled < headerHeight && $fixedHeader.hasClass('visible')) {
+			hideFixedNav();
+		}
+	});
 });
 
 

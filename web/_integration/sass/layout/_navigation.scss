@@ -144,8 +144,9 @@
 		height:100%;
 		padding-top:30px;
 		position:fixed;
-		right:0;
+		right:-280px;
 		top:0;
+		transition:right 200ms;
 		width:280px;
 
 		@media (min-width: $screen-lg-min) {
@@ -153,6 +154,7 @@
 			display:block;
 			padding-top:0;
 			position:static;
+			right:-280px !important;
 			width:auto;
 		}
 
@@ -213,6 +215,14 @@
 					margin-left:0;
 				}
 			}
+		}
+	}
+}
+
+.mnav-open {
+	#fixed-header {
+		.navigation {
+			right:0;
 		}
 	}
 }
