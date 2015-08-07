@@ -16,7 +16,8 @@
     </footer>
 </div>
 
-<script>if ( typeof window.JSON === 'undefined' ) { document.write('<script src="../scripts/uncompressed/json2.js"><\/script>'); }</script>
+<script src="js/plugins/jquery.easing.1.3.min.js"></script> <!-- http://gsgd.co.uk/sandbox/jquery/easing/ -->
+<script src="js/plugins/jquery.history.min.js"></script> <!-- https://github.com/browserstate/history.js/ -->
 <script src="js/plugins/jquery.input-placeholder-polyfill.min.js"></script> <!-- http://osvaldas.info/placeholder-polyfill-with-password-support -->
 <script src="js/main.js"></script>
 </body>

@@ -30,16 +30,16 @@
 <div id="site-wrapper">
     <header id="header" class="site-padding">
         <div class="container-fluid clearfix">
-            <a href="#" class="brand"><img src="images/logo@2x.png" alt="pat.champoux | développeur web" height="128" width="150"></a>
+            <img src="images/logo@2x.png" alt="pat.champoux | développeur web" height="128" width="150" class="brand">
             <nav id="navigation">
                 <ul class="social list-inline list-unstyled text-center">
                     <li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
                     <li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
                 </ul>
                 <ul class="primary list-unstyled text-center">
-                    <li><a href="#realisations">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                    <li><a href="#a-propos">À propos <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
-                    <li><a href="#contact">Contact <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#realisations" data-state="1">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#a-propos" data-state="2">À propos <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
+                    <li><a href="#contact" data-state="3">Contact <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
                 </ul>
             </nav>
         </div>
