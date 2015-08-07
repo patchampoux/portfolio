@@ -36,7 +36,7 @@
             <nav id="navigation">
                 <ul class="social list-inline list-unstyled text-center">
                     <li><a href="https://github.com/patchampoux" target="_blank"><i class="icon-github"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="https://ca.linkedin.com/pub/patrick-champoux/98/50/499" target="_blank"><i class="icon-linkedin"></i></a></li>
                 </ul>
                 <ul class="primary list-unstyled text-center">
                     <li><a href="#realisations" data-state="1">Réalisations <span class="purple-triangle"></span><span class="turquoise-triangle"></span></a></li>
