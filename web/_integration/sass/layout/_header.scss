@@ -20,4 +20,61 @@
 			float:left;
 		}
 	}
+
+	a.brand {
+		display:none;
+	}
+
+	.btn-mnav {
+		display:none;
+	}
+}
+
+#fixed-header {
+	background:url('../images/bg-header-rep.png') repeat-x center 0 #fff;
+	box-shadow:0 0 20px rgba(0, 0, 0, .2);
+	height:74px;
+	left:0;
+	position:fixed;
+	top:-100px;
+	transition:left 200ms, top 200ms;
+	width:100%;
+	z-index:99999;
+
+	&.visible {
+		top:0;
+	}
+
+	.brand {
+		display:none;
+	}
+
+	a.brand {
+		display:inline-block;
+		float:left;
+		margin:12px 0 0 37px;
+	}
+
+	.btn-mnav {
+		float:right;
+		margin-top:28px;
+		width:35px;
+
+		span {
+			background-color:$color-gray;
+			display:block;
+			height:4px;
+			margin-bottom:3px;
+		}
+	}
+}
+
+.mnav-open {
+	#fixed-header {
+		left:-280px;
+
+		@media (min-width: $screen-lg-min) {
+			left:0;
+		}
+	}
 }

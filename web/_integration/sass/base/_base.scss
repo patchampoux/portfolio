@@ -18,10 +18,34 @@ body {
     font-size:100%;
     text-rendering:optimizeLegibility;
     width:100%;
+
+	&.unscroll {
+		overflow:hidden;
+
+		@media (min-width: $screen-lg-min) {
+			overflow:auto;
+		}
+	}
 }
 
 #site-wrapper {
-    width:100%;
+	overflow:hidden;
+	width:100%;
+}
+
+#site-indent {
+	transition:margin-left 200ms;
+	width:100%;
+}
+
+.mnav-open {
+	#site-indent {
+		margin-left:-280px;
+
+		@media (min-width: $screen-lg-min) {
+			margin-left:0;
+		}
+	}
 }
 
 .site-padding {

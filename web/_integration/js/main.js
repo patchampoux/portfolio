@@ -3,8 +3,8 @@ var $window = $(window);
 
 /* History.js change url on scroll and on nav click */
 $(document).ready(function() {
-	var $brandLink = $('.brand'),
-		$navLinks = $('#navigation').find('.primary a'),
+	var $brandLink = $('a.brand'),
+		$navLinks = $('.navigation').find('.primary a'),
 		siteTitle = $('title').text();
 
 	$brandLink.on('click touchstart', function(e) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
 			var $this = $(this);
 
 			if($this.data('state') === state && !$this.hasClass('active')) {
-				$navLinks.removeClass('active');
+				$this.parent().siblings().find('a').removeClass('active');
 
 				$this.addClass('active');
 			} else if(state === 0) {
