@@ -274,7 +274,7 @@ include '_header.php';
 				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
 			</div>
 		</div>
-		<form id="contact-form" action="?section=contact" method="post">
+		<form id="contact-form" action="index.php#contact-form" method="post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
@@ -299,7 +299,7 @@ include '_header.php';
 				<?php endif; ?>
 
 				<?php if(isset($success) && $success === true) : ?>
-					<button class="btn btn-primary success" disabled><i class="icon-check"></i>Succès</button>
+					<button type="submit" class="btn btn-primary success" disabled><i class="icon-check"></i>Succès</button>
 				<?php else : ?>
 					<button type="submit" name="contact-submit" class="btn btn-primary"><i class="icon-forward"></i>Envoyer</button>
 				<?php endif; ?>

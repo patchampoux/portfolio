@@ -254,12 +254,43 @@ $(document).ready(function() {
 	$frm.submit(function(e) {
 		$.ajax({
 			type: $frm.attr('method'),
-			url: $frm.attr('action'),
-			data: $frm.serialize()
-		}).done(function() {
-			alert('Done');
-		}).fail(function() {
-			alert('Fail');
+			url: 'scripts/contact.ajax.php',
+			data: $frm.serialize(),
+			dataType: 'json',
+			success: function(data){
+				var $actionsWrapper = $frm.find('.actions'),
+					$msg = $('<span class="error-msg" style="display:none;"><i class="icon-info"></i>&nbsp;&nbsp;' + data[0].message + '</span>');
+
+				if(data[0].status === 'error') {
+					if($actionsWrapper.find('.error-msg').length) {
+						$actionsWrapper.find('.error-msg').stop(true, true).fadeOut(200, function() {
+							$(this).html('<i class="icon-info"></i>&nbsp;&nbsp;' + data[0].message).stop(true, true).fadeIn(200);
+						});
+					} else  {
+						$actionsWrapper.prepend($msg);
+
+						$msg.stop(true, true).fadeIn(200);
+					}
+				} else {
+					if($actionsWrapper.find('.error-msg').length) {
+						$actionsWrapper.find('.error-msg').stop(true, true).fadeOut(200, function() {
+							$(this).html('<i class="icon-info"></i>&nbsp;&nbsp;' + data[0].message).stop(true, true).fadeIn(200);
+						});
+					} else  {
+						$actionsWrapper.prepend($msg);
+
+						$msg.stop(true, true).fadeIn(200);
+					}
+
+					$frm.find('button').animate({
+						'opacity': 0
+					}, 200, function() {
+						$(this).addClass('success').attr('disabled', 'disabled').html('<i class="icon-check"></i>Succès').animate({
+							'opacity': 1
+						}, 200);
+					});
+				}
+			}
 		});
 
 		e.preventDefault();
