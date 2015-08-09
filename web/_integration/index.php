@@ -263,27 +263,27 @@ include '_header.php';
 			<h2>... de mes certifications récentes</h2>
 			<ul class="row list-unstyled">
 				<li class="col-xs-12 col-sm-6">
-					<h3>Comprende le web</h3>
-					<h4>OpenClassrooms, License 10122418</h4>
-					<a href="#" target="_blank"><i class="icon-export"></i></a>
+					<h3>Gérer son code avec Git et GitHub</h3>
+					<h4>OpenClassrooms, License 34949946</h4>
+					<a href="http://openclassrooms.com/course-certificates/34949946" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+				<li class="col-xs-12 col-sm-6">
+					<h3>Concevez votre site web avec PHP et MySQL</h3>
+					<h4>OpenClassrooms, License 895951787</h4>
+					<a href="http://openclassrooms.com/course-certificates/895951787" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+				<li class="col-xs-12 col-sm-6">
+					<h3>Apprenez à créer votre site web avec HTML5 et CSS3</h3>
+					<h4>OpenClassrooms, License 59317573</h4>
+					<a href="http://openclassrooms.com/course-certificates/59317573" target="_blank"><i class="icon-export"></i></a>
 					<span class="border"></span>
 				</li>
 				<li class="col-xs-12 col-sm-6">
 					<h3>Comprende le web</h3>
 					<h4>OpenClassrooms, License 10122418</h4>
-					<a href="#" target="_blank"><i class="icon-export"></i></a>
-					<span class="border"></span>
-				</li>
-				<li class="col-xs-12 col-sm-6">
-					<h3>Comprende le web</h3>
-					<h4>OpenClassrooms, License 10122418</h4>
-					<a href="#" target="_blank"><i class="icon-export"></i></a>
-					<span class="border"></span>
-				</li>
-				<li class="col-xs-12 col-sm-6">
-					<h3>Comprende le web</h3>
-					<h4>OpenClassrooms, License 10122418</h4>
-					<a href="#" target="_blank"><i class="icon-export"></i></a>
+					<a href="http://openclassrooms.com/course-certificates/10122418" target="_blank"><i class="icon-export"></i></a>
 					<span class="border"></span>
 				</li>
 			</ul>
