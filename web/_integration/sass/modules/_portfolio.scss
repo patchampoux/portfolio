@@ -76,12 +76,12 @@
 				position:absolute;
 				top:0;
 				@include transform-style(preserve-3d);
-				@include transition(all 1s cubic-bezier(0.220, 0.910, 0.505, 1.220));
+				@include transition(all .6s cubic-bezier(0.220, 0.910, 0.505, 1.220));
 				width:100%;
 			}
 
 			.front {
-				@include rotateY(0deg);
+				@include rotateY(90deg);
 				z-index:2;
 			}
 
@@ -89,7 +89,7 @@
 				filter:alpha(opacity=0);
 				opacity:0;
 				padding:35px;
-				@include rotateY(-180deg);
+				@include rotateY(-90deg);
 				z-index:1;
 
 				.dt {
@@ -194,7 +194,7 @@
 				}
 
 				.front {
-					@include rotateY(180deg);
+					@include rotateY(90deg);
 				}
 
 				.description {
