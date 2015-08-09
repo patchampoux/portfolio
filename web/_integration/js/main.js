@@ -132,7 +132,7 @@ $(document).ready(function() {
 		$items.on('click', function(e) {
 			var $this = $(this);
 
-			this.classList.toggle('hover');
+			this.toggleClass('hover');
 
 			$this.parent().siblings().find('.item').removeClass('hover');
 

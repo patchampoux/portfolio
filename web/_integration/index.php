@@ -78,13 +78,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -96,13 +99,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -114,13 +120,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -132,13 +141,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -150,13 +162,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -168,13 +183,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -186,13 +204,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -204,13 +225,16 @@ include '_header.php';
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
 					<span class="gradient"></span>
-					<div class="description">
-						<div class="dt">
-							<div class="dtr">
-								<div class="dtc">
-									<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-									<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass, Git</p>
-									<a href="#"><i class="icon-export"></i></a>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
