@@ -221,13 +221,13 @@ $(document).ready(function() {
 		closeMnav();
 	});
 
-	$('#fixed-header').find('.navigation .primary a').on('click touchstart', function() {
+	$fixedHeader.find('.navigation .primary a').on('click touchstart', function() {
 		setTimeout(function() {
 			closeMnav();
 		}, 1100);
 	});
 
-	$('#fixed-header').find('.navigation').swipe( {
+	$fixedHeader.find('.navigation').swipe( {
 		//Generic swipe handler for all directions
 		swipe:function(event, direction) {
 			if(direction === 'right') {
@@ -243,6 +243,26 @@ $(document).ready(function() {
 				closeMnav();
 			}
 		}
+	});
+});
+
+
+/* Ajax contact form */
+$(document).ready(function() {
+	var $frm = $('#contact-form');
+
+	$frm.submit(function(e) {
+		$.ajax({
+			type: $frm.attr('method'),
+			url: $frm.attr('action'),
+			data: $frm.serialize()
+		}).done(function() {
+			alert('Done');
+		}).fail(function() {
+			alert('Fail');
+		});
+
+		e.preventDefault();
 	});
 });
 

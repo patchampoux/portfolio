@@ -1,5 +1,72 @@
 <?php
+require_once 'includes/functions.php';
+
 $section = 'index';
+
+if(isset($_POST['contact-submit'])) {
+	require "Class/gump.class.php";
+	require "Class/phpmailer.class.php";
+
+	$validator = new GUMP();
+
+	// Set the data
+	$_POST = array(
+		'contact-name' 	  	=> $_POST['contact-name'],
+		'contact-email' 	=> $_POST['contact-email'],
+		'contact-message'	=> $_POST['contact-message']
+	);
+
+	$_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's safest to do so.
+
+	// Let's define the rules and filters
+	$rules = array(
+		'contact-name' 		=> 'required',
+		'contact-email'		=> 'required|valid_email',
+		'contact-message'	=> 'required'
+	);
+
+	$filters = array(
+		'contact-name'		=> 'trim|sanitize_string',
+		'contact-email'		=> 'trim|sanitize_email',
+		'contact-message'	=> 'trim|sanitize_string'
+	);
+
+	$_POST = $validator->filter($_POST, $filters);
+
+	// You can run filter() or validate() first
+	$validated = $validator->validate(
+		$_POST, $rules
+	);
+
+	if($validated === TRUE)
+	{
+		$mail = new PHPMailer;
+		$mail->From = htmlentities($_POST['contact-email']);
+		$mail->FromName = htmlentities($_POST['contact-name']);
+		$mail->Subject = "pat.champoux : Formulaire de contact";
+		$mail->Body = htmlentities($_POST['contact-name']).'<br/>'.htmlentities($_POST['contact-email']).'<br/><br/>'.htmlentities($_POST['contact-message']);
+		$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
+
+		if(!$mail->send()) {
+			$msg = 'Le message n\'a pas pu être envoyé.';
+		} else {
+			$msg = 'Le message a bien été envoyé.';
+			$success = true;
+		}
+	}
+	else
+	{
+		foreach($validated as $v) {
+			switch($v['field']) {
+				case 'contact-email':
+					$msg = 'Veuillez entrer une adresse courriel valide.';
+					break;
+				default:
+					$msg = 'Veuillez remplir tous les champs.';
+			}
+		}
+	}
+}
 
 include '_header.php';
 ?>
@@ -207,29 +274,35 @@ include '_header.php';
 				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
 			</div>
 		</div>
-		<form action="#" method="post">
+		<form id="contact-form" action="?section=contact" method="post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
 						<label for="contact-name" class="sr-only">Nom complet</label>
-						<input type="text" name="contact-name" id="contact-name" class="form-control" placeholder="Nom complet">
+						<input type="text" name="contact-name" id="contact-name" class="form-control" placeholder="Nom complet" value="<?=keepFormValue($_POST['contact-name'])?>">
 					</div>
 					<div class="form-group">
 						<label for="contact-email" class="sr-only">Adresse courriel</label>
-						<input type="email" name="contact-email" id="contact-email" class="form-control" placeholder="Adresse courriel">
+						<input type="email" name="contact-email" id="contact-email" class="form-control" placeholder="Adresse courriel" value="<?=keepFormValue($_POST['contact-email'])?>">
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
 						<label for="contact-message" class="sr-only">Votre message</label>
-						<textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="10" placeholder="Votre message"></textarea>
+						<textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="10" placeholder="Votre message"><?=keepFormValue($_POST['contact-message'])?></textarea>
 					</div>
 				</div>
 			</div>
 			<div class="actions text-center">
-				<span class="error-msg">Erreur : veuillez remplir tous les champs.</span>
-				<button class="btn btn-primary"><i class="icon-forward"></i>Envoyer</button>
-				<!--<button class="btn btn-primary success" disabled><i class="icon-check"></i>Succès</button>-->
+				<?php if(isset($msg)) : ?>
+					<span class="error-msg"><i class="icon-info"></i>&nbsp;&nbsp;<?=$msg?></span>
+				<?php endif; ?>
+
+				<?php if(isset($success) && $success === true) : ?>
+					<button class="btn btn-primary success" disabled><i class="icon-check"></i>Succès</button>
+				<?php else : ?>
+					<button type="submit" name="contact-submit" class="btn btn-primary"><i class="icon-forward"></i>Envoyer</button>
+				<?php endif; ?>
 			</div>
 		</form>
 	</div>

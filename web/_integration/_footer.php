@@ -14,9 +14,8 @@
 				</div>
 			</div>
 		</footer>
-
 	</div>
-		<div id="mnav-overlay"></div>
+	<div id="mnav-overlay"></div>
 </div>
 
 <script src="js/plugins/jquery.easing.1.3.min.js"></script> <!-- http://gsgd.co.uk/sandbox/jquery/easing/ -->
