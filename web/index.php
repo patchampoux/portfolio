@@ -1,62 +1,336 @@
-<!DOCTYPE html>
-<!--[if IE 7]>
-	<html lang="fr" id="html" class="no-js lt-ie9 lt-ie8">
-<![endif]-->
-<!--[if IE 8]>
-	<html lang="fr" id="html" class="no-js lt-ie9">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-	<html lang="fr" id="html" class="no-js">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+<?php
+require_once 'includes/functions.php';
 
-    <link rel="stylesheet" href="css/production.min.css">
+$section = 'index';
 
-    <!-- Favicon and Apple Icons -->
-    <link rel="shortcut icon" href="images/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.ico">
-    <link rel="apple-touch-icon" size="72x72" href="images/icons/apple-touch-icon-72x72.ico">
-    <link rel="apple-touch-icon" size="114x114" href="images/icons/apple-touch-icon-114x114.ico">
-    
-    <!-- HTML5 Shim, HTML5 printshiv and Respond.js IE8 support of HTML5 elements, printing HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/ie/html5shiv-printshiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+if(isset($_POST['contact-submit'])) {
+	require "Class/gump.class.php";
+	require "Class/phpmailer.class.php";
 
-    <script>
-        document.getElementById("html").className = "";
-    </script>
-</head>
-<body>
-    <header class="l-header">
-        
-    </header>
+	$validator = new GUMP();
 
-    <main class="l-main">
-        
-    </main>
+	// Set the data
+	$_POST = array(
+		'contact-name' 	  	=> $_POST['contact-name'],
+		'contact-email' 	=> $_POST['contact-email'],
+		'contact-message'	=> $_POST['contact-message']
+	);
 
-    <footer class="l-footer">
-        
-    </footer>
+	$_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's safest to do so.
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/fallback/jquery-1.11.1.min.js"><\/script>')</script>
+	// Let's define the rules and filters
+	$rules = array(
+		'contact-name' 		=> 'required',
+		'contact-email'		=> 'required|valid_email',
+		'contact-message'	=> 'required'
+	);
 
-    <script src="js/build/production.min.js"></script>
+	$filters = array(
+		'contact-name'		=> 'trim|sanitize_string',
+		'contact-email'		=> 'trim|sanitize_email',
+		'contact-message'	=> 'trim|sanitize_string'
+	);
 
-    <!--[if (gte IE 6)&(lte IE 8)]>
-        <script src="js/ie/selectivizr.min.js"></script>
-    <![endif]-->
-</body>
-</html>	
+	$_POST = $validator->filter($_POST, $filters);
+
+	// You can run filter() or validate() first
+	$validated = $validator->validate(
+		$_POST, $rules
+	);
+
+	if($validated === TRUE)
+	{
+		$mail = new PHPMailer;
+		$mail->From = htmlentities($_POST['contact-email']);
+		$mail->FromName = htmlentities($_POST['contact-name']);
+		$mail->Subject = "pat.champoux : Formulaire de contact";
+		$mail->Body = htmlentities($_POST['contact-name']).'<br/>'.htmlentities($_POST['contact-email']).'<br/><br/>'.htmlentities($_POST['contact-message']);
+		$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
+
+		if(!$mail->send()) {
+			$msg = 'Le message n\'a pas pu être envoyé.';
+		} else {
+			$msg = 'Le message a bien été envoyé.';
+			$success = true;
+		}
+	}
+	else
+	{
+		foreach($validated as $v) {
+			switch($v['field']) {
+				case 'contact-email':
+					$msg = 'Veuillez entrer une adresse courriel valide.';
+					break;
+				default:
+					$msg = 'Veuillez remplir tous les champs.';
+			}
+		}
+	}
+}
+
+include '_header.php';
+?>
+<div id="realisations" class="portfolio list">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
+										<a href="#"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</div>
+<section id="a-propos" class="about site-padding">
+	<div class="container-fluid">
+		<h1 class="text-center">À propos...<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h1>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<h2>... de moi</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed congue sem, ut mattis enim. In sit amet auctor arcu. Nullam in lorem non justo laoreet finibus vulputate vitae ex. Duis tristique ornare sem sed pellentesque. Curabitur commodo laoreet risus, vitae sollicitudin felis rutrum sed. Cras laoreet accumsan sapien quis efficitur. Nulla vitae nibh mauris. Praesent in augue rhoncus, fermentum tortor eu, euismod sem. Mauris lobortis elit in tellus semper, id semper orci molestie. Phasellus eleifend arcu ex, ut efficitur sem ultricies et. Phasellus sodales iaculis nulla, ac varius augue dignissim ac.</p>
+				<br class="visible-xs visible-sm">
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<h2>... de ma formation</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed congue sem, ut mattis enim. In sit amet auctor arcu. Nullam in lorem non justo laoreet finibus vulputate vitae ex. Duis tristique ornare sem sed pellentesque. Curabitur commodo laoreet risus, vitae sollicitudin felis rutrum sed. Cras laoreet accumsan sapien quis efficitur. Nulla vitae nibh mauris. Praesent in augue rhoncus, fermentum tortor eu, euismod sem. Mauris lobortis elit in tellus semper, id semper orci molestie. Phasellus eleifend arcu ex, ut efficitur sem ultricies et. Phasellus sodales iaculis nulla, ac varius augue dignissim ac.</p>
+				<br class="visible-xs visible-sm">
+			</div>
+		</div>
+		<div class="certifications">
+			<h2>... de mes certifications récentes</h2>
+			<ul class="row list-unstyled">
+				<li class="col-xs-12 col-sm-6">
+					<h3>Gérer son code avec Git et GitHub</h3>
+					<h4>OpenClassrooms, License 34949946</h4>
+					<a href="http://openclassrooms.com/course-certificates/34949946" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+				<li class="col-xs-12 col-sm-6">
+					<h3>Concevez votre site web avec PHP et MySQL</h3>
+					<h4>OpenClassrooms, License 895951787</h4>
+					<a href="http://openclassrooms.com/course-certificates/895951787" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+				<li class="col-xs-12 col-sm-6">
+					<h3>Apprenez à créer votre site web avec HTML5 et CSS3</h3>
+					<h4>OpenClassrooms, License 59317573</h4>
+					<a href="http://openclassrooms.com/course-certificates/59317573" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+				<li class="col-xs-12 col-sm-6">
+					<h3>Comprende le web</h3>
+					<h4>OpenClassrooms, License 10122418</h4>
+					<a href="http://openclassrooms.com/course-certificates/10122418" target="_blank"><i class="icon-export"></i></a>
+					<span class="border"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section id="contact" class="contact site-padding">
+	<div class="container-fluid">
+		<h1 class="reverse text-center">Contact<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h1>
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
+			</div>
+		</div>
+		<form id="contact-form" action="index.php#contact-form" method="post">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<div class="form-group">
+						<label for="contact-name" class="sr-only">Nom complet</label>
+						<input type="text" name="contact-name" id="contact-name" class="form-control" placeholder="Nom complet" value="<?=keepFormValue($_POST['contact-name'])?>">
+					</div>
+					<div class="form-group">
+						<label for="contact-email" class="sr-only">Adresse courriel</label>
+						<input type="email" name="contact-email" id="contact-email" class="form-control" placeholder="Adresse courriel" value="<?=keepFormValue($_POST['contact-email'])?>">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="form-group">
+						<label for="contact-message" class="sr-only">Votre message</label>
+						<textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="10" placeholder="Votre message"><?=keepFormValue($_POST['contact-message'])?></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="actions text-center">
+				<?php if(isset($msg)) : ?>
+					<span class="error-msg"><i class="icon-info"></i>&nbsp;&nbsp;<?=$msg?></span>
+				<?php endif; ?>
+
+				<?php if(isset($success) && $success === true) : ?>
+					<button type="submit" class="btn btn-primary success" disabled><i class="icon-check"></i>Succès</button>
+				<?php else : ?>
+					<button type="submit" name="contact-submit" class="btn btn-primary"><i class="icon-forward"></i>Envoyer</button>
+				<?php endif; ?>
+			</div>
+		</form>
+	</div>
+</section>
+<?php
+include '_footer.php';
+?>

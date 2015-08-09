@@ -1,3 +1,60 @@
-.l-footer {
-	
+#footer {
+	background-color:$color-darkgray;
+	padding-bottom:21px;
+	padding-top:21px;
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom:0;
+		padding-top:0;
+	}
+
+	p {
+		color:$color-gray;
+		font-size:14px;
+		line-height:18px;
+		margin:0;
+		text-align:center;
+
+		@media (min-width: $screen-sm-min) {
+			line-height:60px;
+			text-align:left;
+		}
+	}
+
+	.social {
+		margin:0;
+		padding-top:20px;
+
+		@media (min-width: $screen-sm-min) {
+			text-align:right;
+		}
+
+		li {
+			padding:0 0 0 15px;
+		}
+
+		a {
+			color:$color-gray;
+			@include transition(color 200ms);
+
+			.icon-github {
+				font-size:19px;
+				position:relative;
+				top:1px;
+			}
+
+			.icon-linkedin {
+				font-size:20px;
+			}
+
+			&:hover {
+				color:#fff;
+				text-decoration:none;
+			}
+
+			&:focus {
+				text-decoration:none;
+			}
+		}
+	}
 }

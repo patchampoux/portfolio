@@ -1,3 +1,80 @@
-.l-header {
-	
+#header {
+	background:url('../images/bg-header-rep.png') repeat-x center 0 #fff;
+	padding-bottom:75px;
+	padding-top:30px;
+	position:relative;
+	text-align:center;
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom:90px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		height:248px;
+		padding-bottom:0;
+		padding-top:60px;
+	}
+
+	.brand {
+		@media (min-width: $screen-md-min) {
+			float:left;
+		}
+	}
+
+	a.brand {
+		display:none;
+	}
+
+	.btn-mnav {
+		display:none;
+	}
+}
+
+#fixed-header {
+	background:url('../images/bg-header-rep.png') repeat-x center 0 #fff;
+	box-shadow:0 0 20px rgba(0, 0, 0, .2);
+	height:74px;
+	left:0;
+	position:fixed;
+	top:-100px;
+	transition:left 300ms, top 300ms;
+	width:100%;
+	z-index:99999;
+
+	&.visible {
+		top:0;
+	}
+
+	.brand {
+		display:none;
+	}
+
+	a.brand {
+		display:inline-block;
+		float:left;
+		margin:12px 0 0;
+	}
+
+	.btn-mnav {
+		float:right;
+		margin-top:28px;
+		width:35px;
+
+		span {
+			background-color:$color-gray;
+			display:block;
+			height:4px;
+			margin-bottom:3px;
+		}
+	}
+}
+
+.mnav-open {
+	#fixed-header {
+		left:-280px;
+
+		@media (min-width: $screen-lg-min) {
+			left:0;
+		}
+	}
 }
