@@ -44,8 +44,7 @@ $(document).ready(function() {
 			aboutOT = $('#a-propos').offset().top,
 			contactOT = $('#contact').offset().top,
 			siteHeight = $('#site-wrapper').outerHeight(),
-			windowHeight = $window.outerHeight(),
-			yScroll;
+			windowHeight = $window.outerHeight();
 
 		if(scrolled >= 0 && scrolled < realisationsOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			setActiveLink(0);
