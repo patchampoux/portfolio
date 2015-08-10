@@ -5,11 +5,17 @@ require "../Class/phpmailer.class.php";
 
 $validator = new GUMP();
 
+$name = htmlspecialchars($_POST['contact-name']);
+$email = htmlspecialchars($_POST['contact-email']);
+$message = htmlspecialchars($_POST['contact-message']);
+$hp = htmlspecialchars($_POST['contact-hp']);
+
 // Set the data
 $_POST = array(
-	'contact-name' 	  	=> $_POST['contact-name'],
-	'contact-email' 	=> $_POST['contact-email'],
-	'contact-message'	=> $_POST['contact-message']
+	'contact-name' 	  	=> $name,
+	'contact-email' 	=> $email,
+	'contact-message'	=> $message,
+	'contact-hp'		=> $hp
 );
 
 $_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's safest to do so.
@@ -18,7 +24,8 @@ $_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's s
 $rules = array(
 	'contact-name' 		=> 'required',
 	'contact-email'		=> 'required|valid_email',
-	'contact-message'	=> 'required'
+	'contact-message'	=> 'required',
+	'contact-hp'		=> 'max_len,0'
 );
 
 $filters = array(
@@ -36,10 +43,10 @@ $validated = $validator->validate(
 
 if($validated === TRUE)
 {
-	$body = htmlspecialchars($_POST['contact-name'])."\n".htmlspecialchars($_POST['contact-email'])."\n\n".htmlspecialchars($_POST['contact-message']);
+	$body = $name."\n".$email."\n\n".$message;
 	$mail = new PHPMailer;
-	$mail->From = htmlentities($_POST['contact-email']);
-	$mail->FromName = htmlentities($_POST['contact-name']);
+	$mail->From = $email;
+	$mail->FromName = $name;
 	$mail->Subject = "pat.champoux : Formulaire de contact";
 	$mail->Body = $body;
 	$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
@@ -56,6 +63,9 @@ else
 		switch($v['field']) {
 			case 'contact-email':
 				$msg = array('status' => 'error','message'=> 'Veuillez entrer une adresse courriel valide.');
+				break;
+			case 'contact-hp':
+				$msg = array('status' => 'error','message'=> '');
 				break;
 			default:
 				$msg = array('status' => 'error','message'=> 'Veuillez remplir tous les champs.');

@@ -9,11 +9,17 @@ if(isset($_POST['contact-submit'])) {
 
 	$validator = new GUMP();
 
+	$name = htmlspecialchars($_POST['contact-name']);
+	$email = htmlspecialchars($_POST['contact-email']);
+	$message = htmlspecialchars($_POST['contact-message']);
+	$hp = htmlspecialchars($_POST['contact-hp']);
+
 	// Set the data
 	$_POST = array(
-		'contact-name' 	  	=> $_POST['contact-name'],
-		'contact-email' 	=> $_POST['contact-email'],
-		'contact-message'	=> $_POST['contact-message']
+		'contact-name' 	  	=> $name,
+		'contact-email' 	=> $email,
+		'contact-message'	=> $message,
+		'contact-hp'		=> $hp
 	);
 
 	$_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's safest to do so.
@@ -22,7 +28,8 @@ if(isset($_POST['contact-submit'])) {
 	$rules = array(
 		'contact-name' 		=> 'required',
 		'contact-email'		=> 'required|valid_email',
-		'contact-message'	=> 'required'
+		'contact-message'	=> 'required',
+		'contact-hp'		=> 'max_len,0'
 	);
 
 	$filters = array(
@@ -40,10 +47,10 @@ if(isset($_POST['contact-submit'])) {
 
 	if($validated === TRUE)
 	{
-		$body = htmlspecialchars($_POST['contact-name'])."\n".htmlspecialchars($_POST['contact-email'])."\n\n".htmlspecialchars($_POST['contact-message']);
+		$body = $name."\n".$email."\n\n".$message;
 		$mail = new PHPMailer;
-		$mail->From = htmlentities($_POST['contact-email']);
-		$mail->FromName = htmlentities($_POST['contact-name']);
+		$mail->From = $email;
+		$mail->FromName = $name;
 		$mail->Subject = "pat.champoux : Formulaire de contact";
 		$mail->Body = $body;
 		$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
@@ -61,6 +68,9 @@ if(isset($_POST['contact-submit'])) {
 			switch($v['field']) {
 				case 'contact-email':
 					$msg = 'Veuillez entrer une adresse courriel valide.';
+					break;
+				case 'contact-hp':
+					$msg = ' ';
 					break;
 				default:
 					$msg = 'Veuillez remplir tous les champs.';
@@ -295,6 +305,12 @@ include '_header.php';
 						<label for="contact-message" class="sr-only">Votre message</label>
 						<textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="10" placeholder="Votre message"><?=keepFormValue($_POST['contact-message'])?></textarea>
 					</div>
+				</div>
+			</div>
+			<div class="robotic">
+				<div class="form-group">
+					<label for="contact-hp" class="sr-only">Si vous êtes humain, ne remplissez pas ce champs</label>
+					<input type="text" name="contact-hp" id="contact-hp" class="form-control" placeholder="Si vous êtes humain, ne remplissez pas ce champs">
 				</div>
 			</div>
 			<div class="actions text-center">
