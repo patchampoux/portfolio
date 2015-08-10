@@ -19,7 +19,7 @@
     <meta property="og:image" content="http://patchampoux.com/images/og-img.png" />
     <meta property="og:description" content="Patrick Champoux, développeur Web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
 
-    <link rel="stylesheet" media="screen" href="css/main.css" />
+    <link rel="stylesheet" media="screen" href="css/main.css?1" />
 
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet'>
 
