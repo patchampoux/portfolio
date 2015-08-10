@@ -36,11 +36,12 @@ $validated = $validator->validate(
 
 if($validated === TRUE)
 {
+	$body = htmlspecialchars($_POST['contact-name'])."\n".htmlspecialchars($_POST['contact-email'])."\n\n".htmlspecialchars($_POST['contact-message']);
 	$mail = new PHPMailer;
 	$mail->From = htmlentities($_POST['contact-email']);
 	$mail->FromName = htmlentities($_POST['contact-name']);
 	$mail->Subject = "pat.champoux : Formulaire de contact";
-	$mail->Body = htmlentities($_POST['contact-name']).'<br/>'.htmlentities($_POST['contact-email']).'<br/><br/>'.htmlentities($_POST['contact-message']);
+	$mail->Body = $body;
 	$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
 
 	if(!$mail->send()) {
