@@ -161,6 +161,27 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/portfolio/sushi-taxi.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Sushi Taxi<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, jQuery</p>
+										<a href="https://www.sushitaxi.net/" target="_blank"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/portfolio/loud-lary-adjust.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
@@ -233,7 +254,7 @@ include '_header.php';
 		<h1 class="reverse text-center">Contact<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h1>
 		<div class="row">
 			<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
+				<p class="reverse text-center">Parlez-moi d'une histoire de contrat, comprenant beaucoup d'HTML sémantic, de CSS élégant, peut-être même de fonctionnalités PHP ou même de Wordpress. J'attends de vos nouvelles!</p>
 			</div>
 		</div>
 		<form id="contact-form" action="/#contact-form" method="post">
