@@ -38,51 +38,6 @@ $(document).ready(function() {
 		});
 	}
 
-	function goToSection() {
-		var url = window.location.href,
-			sectionUrl = url.split('?')[1];
-
-		if(sectionUrl) {
-			sectionUrl = sectionUrl.split('&')[0];
-		}
-
-		if(sectionUrl) {
-			sectionUrl = sectionUrl.split('=')[1];
-		}
-
-		if(sectionUrl === 'accueil') {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
-
-			setActiveLink(0);
-
-			$("html, body").scrollTop(0);
-		} else if(sectionUrl === 'realisations') {
-			History.replaceState({state:1}, "", "?section=realisations");
-
-			setActiveLink(1);
-
-			$("html, body").scrollTop($('#realisations').offset().top);
-		} else if(sectionUrl === 'a-propos') {
-			History.replaceState({state:2}, "", "?section=a-propos");
-
-			setActiveLink(2);
-
-			$("html, body").scrollTop($('#a-propos').offset().top);
-		} else if(sectionUrl === 'contact') {
-			History.replaceState({state:2}, "", "?section=a-propos");
-
-			setActiveLink(3);
-
-			$("html, body").scrollTop($('#contact').offset().top);
-		} else {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
-
-			setActiveLink(0);
-
-			$("html, body").scrollTop(0);
-		}
-	}
-
 	function setSate() {
 		var scrolled = $window.scrollTop(),
 			realisationsOT = $('#realisations').offset().top,
@@ -92,31 +47,31 @@ $(document).ready(function() {
 			windowHeight = $window.outerHeight();
 
 		if(scrolled >= 0 && scrolled < realisationsOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
+			history.pushState('', document.title, window.location.pathname);
 
 			setActiveLink(0);
 		}
 
 		if(scrolled >= realisationsOT && scrolled < aboutOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
-			History.replaceState({state:1}, "Réalisations | " + siteTitle, "?section=realisations");
+			window.location.hash = 'realisations';
 
 			setActiveLink(1);
 		}
 
 		if(scrolled >= aboutOT && scrolled < contactOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
-			History.replaceState({state:2}, "À propos | " + siteTitle, "?section=a-propos");
+			window.location.hash = 'a-propos';
 
 			setActiveLink(2);
 		}
 
 		if(scrolled >= contactOT || scrolled >= siteHeight - (windowHeight + 100)) {
-			History.replaceState({state:3}, "Contact | " + siteTitle, "?section=contact");
+			window.location.hash = 'contact';
 
 			setActiveLink(3);
 		}
 	}
 
-	goToSection();
+	//goToSection();
 
 	$window.on('scroll', function() {
 		setSate();
