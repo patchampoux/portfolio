@@ -240,7 +240,7 @@ include '_header.php';
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
 				<h2>... de moi</h2>
-				<p>Amoureux de musique métal en tout genre, de bière de microbrasserie, de vélo de montagne et guitariste à mes heures, je serai capable d’emmener vos projets à destination et plus loin encore grâce à une expérience solide de plus de 5 ans dans le domaine du Web. Ayant un grand souci du détail, l’expérience utilisateur et la performance de votre site Internet comme obsession, il est important pour moi qu’à la livraison de mon travail, votre entière satisfaction soit&nbsp;atteinte.</p>
+				<p>Mon nom est Patrick Champoux, amoureux de musique métal en tout genre, de bière de microbrasserie, de vélo de montagne et guitariste à mes heures, je serai capable d’emmener vos projets à destination et plus loin encore grâce à une expérience solide de plus de 5 ans dans le domaine du Web. Ayant un grand souci du détail, l’expérience utilisateur et la performance de votre site Internet comme obsession, il est important pour moi qu’à la livraison de mon travail, votre entière satisfaction soit&nbsp;atteinte.</p>
 				<br class="visible-xs visible-sm">
 			</div>
 			<div class="col-xs-12 col-md-6">
