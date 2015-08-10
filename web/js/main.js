@@ -59,7 +59,7 @@ $(document).ready(function() {
 			setActiveLink(2);
 		}
 
-		if(scrolled >= contactOT || scrolled >= siteHeight - (windowHeight + 100)) {
+		if((scrolled >= contactOT - 50) || scrolled >= siteHeight - (windowHeight + 100)) {
 			setActiveLink(3);
 		}
 	}
