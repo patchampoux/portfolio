@@ -299,7 +299,7 @@ include '_header.php';
 				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
 			</div>
 		</div>
-		<form id="contact-form" action="#contact-form" method="post">
+		<form id="contact-form" action="/#contact-form" method="post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
