@@ -214,7 +214,7 @@ include '_header.php';
 			</div>
 			<div class="col-xs-12 col-md-6">
 				<h2>... de ma formation</h2>
-				<p>Diplômé d'un AEC en Développement Web au Cégep de Trois-Rivières, j'ai pu commencer à travailler en agence avec une bonne base comme développeur "Front-End". J'ai par la suite toujours fait beaucoup de formation personnelle afin d’améliorer mes connaissances au niveau de l’intégration, mais aussi au niveau de la programmation Web. Vous pourrez comprendre en regardant mes certifications récentes, que pour moi, l’apprentissage fait partie intégrale de mon style de vie.</p>
+				<p>Je suis diplômé d'un AEC en Développement Web du Cégep de Trois-Rivières. Cette formation m’a permise d’acquérir les compétences nécessaires afin de concevoir, de développer, d’intégrer et de maintenir des applications et des services Web de façon professionnelle depuis 2010. Le fait d’avoir travaillé en agence pendant plus de cinq années m’a permis d’aiguiser mes connaissances techniques et mon esprit d’équipe. J'ai aussi toujours fait beaucoup de formation personnelle afin d’améliorer mes connaissances au niveau de l’intégration, mais aussi au niveau de la programmation Web. Vous pourrez comprendre en regardant mes certifications récentes, que pour moi, l’apprentissage fait partie intégrale de mon style de vie.</p>
 				<br class="visible-xs visible-sm">
 			</div>
 		</div>
