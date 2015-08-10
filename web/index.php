@@ -45,7 +45,6 @@ if(isset($_POST['contact-submit'])) {
 		$mail->From = htmlentities($_POST['contact-email']);
 		$mail->FromName = htmlentities($_POST['contact-name']);
 		$mail->Subject = "pat.champoux : Formulaire de contact";
-		$mail->isHTML(true);
 		$mail->Body = $body;
 		$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
 
