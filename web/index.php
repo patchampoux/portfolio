@@ -230,12 +230,12 @@ include '_header.php';
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
 				<h2>... de moi</h2>
-				<p>Amoureux de musique métal en tout genre, de bière de microbrasserie, de vélo de montagne et guitariste à mes heures, je serai capable d’emmener vos projets à destination et plus loin encore grâce à une expérience solide de plus de 5 ans dans le domaine du Web. Ayant un grand soucis du détail, l’expérience utilisateur et la performance de votre site Internet comme obsession, il est important pour moi qu’à la livraison de mon travail, votre entière satisfaction soit&nbsp;atteinte.</p>
+				<p>Amoureux de musique métal en tout genre, de bière de microbrasserie, de vélo de montagne et guitariste à mes heures, je serai capable d’emmener vos projets à destination et plus loin encore grâce à une expérience solide de plus de 5 ans dans le domaine du Web. Ayant un grand souci du détail, l’expérience utilisateur et la performance de votre site Internet comme obsession, il est important pour moi qu’à la livraison de mon travail, votre entière satisfaction soit&nbsp;atteinte.</p>
 				<br class="visible-xs visible-sm">
 			</div>
 			<div class="col-xs-12 col-md-6">
 				<h2>... de ma formation</h2>
-				<p>Je suis diplômé d'un AEC en Développement Web du Cégep de Trois-Rivières. Cette formation m’a permise d’acquérir les compétences nécessaires afin de concevoir, de développer, d’intégrer et de maintenir des applications et des services Web de façon professionnelle depuis 2010. Le fait d’avoir travaillé en agence pendant plus de cinq années m’a permis d’aiguiser mes connaissances techniques et mon esprit d’équipe. Vous pourrez aussi comprendre en regardant mes certifications récentes que l’apprentissage fait partie intégrale de mon style de&nbsp;vie.</p>
+				<p>Je suis diplômé d'un AEC en Développement Web du Cégep de Trois-Rivières. Cette formation m’a permise d’acquérir les compétences nécessaires afin de concevoir, de développer, d’intégrer et de maintenir des applications et des services Web de façon professionnelle depuis 2010. Le fait d’avoir travaillé en agence pendant plus de cinq années m’a permis d’aiguiser mes connaissances techniques et mon esprit d’équipe. Vous pourrez aussi comprendre en regardant mes certifications récentes que l’apprentissage fait partie inhérente de mon style de&nbsp;vie.</p>
 				<br class="visible-xs visible-sm">
 			</div>
 		</div>
@@ -261,7 +261,7 @@ include '_header.php';
 					<span class="border"></span>
 				</li>
 				<li class="col-xs-12 col-sm-6">
-					<h3>Comprende le web</h3>
+					<h3>Comprendre le web</h3>
 					<h4>OpenClassrooms, License 10122418</h4>
 					<a href="http://openclassrooms.com/course-certificates/10122418" target="_blank"><i class="icon-export"></i></a>
 					<span class="border"></span>
