@@ -51,7 +51,7 @@ $(document).ready(function() {
 		}
 
 		if(sectionUrl === 'accueil') {
-			History.replaceState({state:0}, "", "?section=accueil");
+			History.replaceState({state:0}, siteTitle, "?section=accueil");
 
 			setActiveLink(0);
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 			$("html, body").scrollTop($('#contact').offset().top);
 		} else {
-			History.replaceState({state:0}, siteTitle, "?section=accueil");
+			History.replaceState({state:0}, "", "?section=accueil");
 
 			setActiveLink(0);
 
