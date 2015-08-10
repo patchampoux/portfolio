@@ -40,7 +40,7 @@ if(isset($_POST['contact-submit'])) {
 
 	if($validated === TRUE)
 	{
-		$body = htmlentities($_POST['contact-name']).'\n'.htmlentities($_POST['contact-email']).'\n\n'.htmlentities($_POST['contact-message']);
+		$body = htmlentities($_POST['contact-name'])."\n".htmlentities($_POST['contact-email'])."\n\n".htmlentities($_POST['contact-message']);
 		$mail = new PHPMailer;
 		$mail->From = htmlentities($_POST['contact-email']);
 		$mail->FromName = htmlentities($_POST['contact-name']);
