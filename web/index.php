@@ -40,11 +40,13 @@ if(isset($_POST['contact-submit'])) {
 
 	if($validated === TRUE)
 	{
+		$body = htmlentities($_POST['contact-name']).'\n'.htmlentities($_POST['contact-email']).'\n\n'.htmlentities($_POST['contact-message']);
 		$mail = new PHPMailer;
 		$mail->From = htmlentities($_POST['contact-email']);
 		$mail->FromName = htmlentities($_POST['contact-name']);
 		$mail->Subject = "pat.champoux : Formulaire de contact";
-		$mail->Body = htmlentities($_POST['contact-name']).'<br/>'.htmlentities($_POST['contact-email']).'<br/><br/>'.htmlentities($_POST['contact-message']);
+		$mail->isHTML(true);
+		$mail->Body = $body;
 		$mail->AddAddress('champoux.patrick@gmail.com', 'Patrick Champoux');
 
 		if(!$mail->send()) {
@@ -298,7 +300,7 @@ include '_header.php';
 				<p class="reverse text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel erat quis urna vehicula eleifend. Phasellus maximus ligula condimentum viverra dictum. Proin facilisis purus elit, et lacinia tortor placerat eget.</p>
 			</div>
 		</div>
-		<form id="contact-form" action="index.php#contact-form" method="post">
+		<form id="contact-form" action="#contact-form" method="post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="form-group">
