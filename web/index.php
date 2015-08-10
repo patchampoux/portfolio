@@ -200,6 +200,27 @@ include '_header.php';
 					</div>
 				</article>
 			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/portfolio/multi-caisses.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Multi-Caisses<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, PHP, jQuery, Sass,&nbsp;Git</p>
+										<a href="http://www.multi-caisses.com/" target="_blank"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
 		</div>
 	</div>
 </div>
