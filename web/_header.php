@@ -15,8 +15,8 @@
 
     <meta property="og:title" content="pat.champoux | développeur web" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.patchampoux.com/" />
-    <meta property="og:image" content="http://www.patchampoux.com/images/og-img.png" />
+    <meta property="og:url" content="http://patchampoux.com/" />
+    <meta property="og:image" content="http://patchampoux.com/images/og-img.png" />
     <meta property="og:description" content="Patrick Champoux, développeur web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
 
     <link rel="stylesheet" media="screen" href="css/main.css" />
