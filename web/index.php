@@ -77,7 +77,7 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="img" style="background-image:url('images/portfolio/dumoulin-competition.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
 						<div class="front"></div>
@@ -85,9 +85,9 @@ include '_header.php';
 							<div class="dt">
 								<div class="dtr">
 									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<h2 class="text-center">Dumoulin Compétition<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
 										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
+										<a href="http://www.dumoulincompetition.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>
@@ -98,7 +98,7 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="img" style="background-image:url('images/portfolio/32-mars.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
 						<div class="front"></div>
@@ -106,9 +106,9 @@ include '_header.php';
 							<div class="dt">
 								<div class="dtr">
 									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
+										<h2 class="text-center">32 MARS<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript,&nbsp;jQuery</p>
+										<a href="http://www.32mars.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>
@@ -119,7 +119,7 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="img" style="background-image:url('images/portfolio/elvis-experience.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
 						<div class="front"></div>
@@ -127,9 +127,9 @@ include '_header.php';
 							<div class="dt">
 								<div class="dtr">
 									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
+										<h2 class="text-center">Elvis Experience<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, PHP,&nbsp;Wordpress</p>
+										<a href="http://elvisexperience.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>
@@ -140,7 +140,7 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="img" style="background-image:url('images/portfolio/trop-mignon.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
 						<div class="front"></div>
@@ -148,9 +148,9 @@ include '_header.php';
 							<div class="dt">
 								<div class="dtr">
 									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
+										<h2 class="text-center">Trop Mignon Photographie<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, jQuery,&nbsp;Sass</p>
+										<a href="http://tropmignonphotographie.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>
@@ -161,7 +161,7 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
+					<span class="img" style="background-image:url('images/portfolio/loud-lary-adjust.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
 						<div class="front"></div>
@@ -169,72 +169,9 @@ include '_header.php';
 							<div class="dt">
 								<div class="dtr">
 									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
-				<article class="item">
-					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
-					<span class="gradient"></span>
-					<div class="flipper">
-						<div class="front"></div>
-						<div class="description">
-							<div class="dt">
-								<div class="dtr">
-									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
-				<article class="item">
-					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
-					<span class="gradient"></span>
-					<div class="flipper">
-						<div class="front"></div>
-						<div class="description">
-							<div class="dt">
-								<div class="dtr">
-									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
-				<article class="item">
-					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/img-portfolio-item.jpg');"></span>
-					<span class="gradient"></span>
-					<div class="flipper">
-						<div class="front"></div>
-						<div class="description">
-							<div class="dt">
-								<div class="dtr">
-									<div class="dtc">
-										<h2 class="text-center">Prorez<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass,&nbsp;Git</p>
-										<a href="#"><i class="icon-export"></i></a>
+										<h2 class="text-center">Loud Lary Ajust<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS</p>
+										<a href="http://www.loudlaryajust.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>

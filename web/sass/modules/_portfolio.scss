@@ -1,5 +1,6 @@
 .portfolio {
 	&.list {
+		background-color:#cdcdcd;
 		@media (min-width: 600px) and (max-width: $screen-xs-max) {
 			.col-xs-12 {
 				width:50%;
@@ -89,7 +90,7 @@
 				filter:alpha(opacity=0);
 				opacity:0;
 				padding:35px;
-				@include rotateY(-90deg);
+				@include rotateY(-91deg);
 				z-index:1;
 
 				.dt {
@@ -194,7 +195,7 @@
 				}
 
 				.front {
-					@include rotateY(90deg);
+					@include rotateY(91deg);
 				}
 
 				.description {
