@@ -1,8 +1,6 @@
-Options +FollowSymLinks
 RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteCond %{HTTP_HOST}  ^www.patchampoux.com [NC]
+RewriteRule ^(.*) http://patchampoux.com/$1 [L,R=301]
 
 #ErrorDocument 404 /patchampoux/portfolio/web/404.html
 ErrorDocument 404 /404.html
