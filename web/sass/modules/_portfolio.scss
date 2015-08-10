@@ -77,7 +77,8 @@
 				position:absolute;
 				top:0;
 				@include transform-style(preserve-3d);
-				@include transition(all .8s cubic-bezier(0.220, 0.910, 0.505, 1.220));
+				@include transition(all 1s cubic-bezier(0.220, 0.910, 0.505, 1.220));
+
 				width:100%;
 			}
 
