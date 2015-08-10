@@ -214,7 +214,7 @@ include '_header.php';
 			</div>
 			<div class="col-xs-12 col-md-6">
 				<h2>... de ma formation</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed congue sem, ut mattis enim. In sit amet auctor arcu. Nullam in lorem non justo laoreet finibus vulputate vitae ex. Duis tristique ornare sem sed pellentesque. Curabitur commodo laoreet risus, vitae sollicitudin felis rutrum sed. Cras laoreet accumsan sapien quis efficitur. Nulla vitae nibh mauris. Praesent in augue rhoncus, fermentum tortor eu, euismod sem. Mauris lobortis elit in tellus semper, id semper orci molestie. Phasellus eleifend arcu ex, ut efficitur sem ultricies et. Phasellus sodales iaculis nulla, ac varius augue dignissim ac.</p>
+				<p>Diplômé d'un AEC en Développement Web au Cégep de Trois-Rivières, j'ai pu commencer à travailler en agence avec une bonne base comme développeur "Front-End". J'ai par la suite toujours fait beaucoup de formation personnelle afin d’améliorer mes connaissances au niveau de l’intégration, mais aussi au niveau de la programmation Web. Vous pourrez comprendre en regardant mes certifications récentes, que pour moi, l’apprentissage fait partie intégrale de mon style de vie.</p>
 				<br class="visible-xs visible-sm">
 			</div>
 		</div>
@@ -254,7 +254,7 @@ include '_header.php';
 		<h1 class="reverse text-center">Contact<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h1>
 		<div class="row">
 			<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-				<p class="reverse text-center">Parlez-moi d'une histoire de contrat, comprenant beaucoup d'HTML sémantic, de CSS élégant, peut-être même de fonctionnalités PHP ou même de Wordpress. J'attends de vos nouvelles!</p>
+				<p class="reverse text-center">Parlez-moi d'une histoire de contrat, d'un site Internet, comprenant beaucoup d'HTML sémantic, de CSS élégant, peut-être même de fonctionnalités PHP ou même de Wordpress. J'attends de vos nouvelles!</p>
 			</div>
 		</div>
 		<form id="contact-form" action="/#contact-form" method="post">

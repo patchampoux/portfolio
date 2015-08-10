@@ -45,7 +45,7 @@
                 <img src="images/logo@2x.png" alt="pat.champoux | développeur web" height="128" width="150" class="brand">
                 <a href="#" class="brand"><img src="images/logo-min@2x.png" alt="pat.champoux | développeur web" height="49" width="76"></a>
                 <a href="#" class="btn-mnav hidden-lg"><span></span><span></span><span></span></a>
-                <nav class="navigation" role="navigation">
+                <nav class="navigation">
                     <ul class="social list-inline list-unstyled text-center">
                         <li><a href="https://github.com/patchampoux" target="_blank"><i class="icon-github"></i></a></li>
                         <li><a href="https://ca.linkedin.com/pub/patrick-champoux/98/50/499" target="_blank"><i class="icon-linkedin"></i></a></li>
