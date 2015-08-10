@@ -1,3 +1,9 @@
+.ie8 {
+	.portfolio.list .item .description {
+		z-index:3;
+	}
+}
+
 .ie9 {
 	.portfolio.list .item .gradient,
 	.certifications .border {
