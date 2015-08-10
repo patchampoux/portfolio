@@ -9,7 +9,7 @@
     <title>pat.champoux | développeur web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Patrick Champoux, développeur web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
+    <meta name="description" content="Patrick Champoux, développeur Web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
     <meta name="keywords" content="patrick champoux, pat.champoux, développeur web, html, css, javascript, php, bootstrap, jquery, mysql, front-end, back-end, trois-rivieres, quebec, canada" />
     <meta name="robots" content="index,follow" />
 
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://patchampoux.com/" />
     <meta property="og:image" content="http://patchampoux.com/images/og-img.png" />
-    <meta property="og:description" content="Patrick Champoux, développeur web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
+    <meta property="og:description" content="Patrick Champoux, développeur Web | HTML, CSS, JavaScript, Bootstrap, jQuery, PHP, MySQL" />
 
     <link rel="stylesheet" media="screen" href="css/main.css" />
 
