@@ -3,7 +3,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-12 col-sm-8">
-						<p>&copy; pat.champoux 2015&nbsp;&nbsp;|&nbsp;&nbsp;Ensemble, réalisation quelque-chose de bien.</p>
+						<p>&copy; pat.champoux 2015&nbsp;&nbsp;|&nbsp;&nbsp;Ensemble, réalisation quelque chose de bien.</p>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<ul class="social list-inline list-unstyled text-center">
