@@ -44,7 +44,8 @@ $(document).ready(function() {
 			aboutOT = $('#a-propos').offset().top,
 			contactOT = $('#contact').offset().top,
 			siteHeight = $('#site-wrapper').outerHeight(),
-			windowHeight = $window.outerHeight();
+			windowHeight = $window.outerHeight(),
+			yScroll;
 
 		if(scrolled >= 0 && scrolled < realisationsOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			history.pushState('', document.title, window.location.pathname);
@@ -53,25 +54,35 @@ $(document).ready(function() {
 		}
 
 		if(scrolled >= realisationsOT && scrolled < aboutOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
+			yScroll = document.body.scrollTop;
+
 			window.location.hash = 'realisations';
+
+			document.body.scrollTop = yScroll;
 
 			setActiveLink(1);
 		}
 
 		if(scrolled >= aboutOT && scrolled < contactOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
+			yScroll = document.body.scrollTop;
+
 			window.location.hash = 'a-propos';
+
+			document.body.scrollTop = yScroll;
 
 			setActiveLink(2);
 		}
 
 		if(scrolled >= contactOT || scrolled >= siteHeight - (windowHeight + 100)) {
+			yScroll = document.body.scrollTop;
+
 			window.location.hash = 'contact';
+
+			document.body.scrollTop = yScroll;
 
 			setActiveLink(3);
 		}
 	}
-
-	//goToSection();
 
 	$window.on('scroll', function() {
 		setSate();
