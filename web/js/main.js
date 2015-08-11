@@ -49,25 +49,33 @@ $(document).ready(function() {
 		if(scrolled >= 0 && scrolled < realisationsOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			setActiveLink(0);
 
-			history.replaceState('data', siteTitle, ' ');
+			if (window.history && window.history.replaceState) {
+				history.replaceState('data', siteTitle, ' ');
+			}
 		}
 
 		if(scrolled >= realisationsOT && scrolled < aboutOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			setActiveLink(1);
 
-			history.replaceState('data', siteTitle, '#realisations');
+			if (window.history && window.history.replaceState) {
+				history.replaceState('data', siteTitle, '#realisations');
+			}
 		}
 
 		if(scrolled >= aboutOT && scrolled < contactOT && (scrolled >= siteHeight - (windowHeight + 100)) === false) {
 			setActiveLink(2);
 
-			history.replaceState('data', siteTitle, '#a-propos');
+			if (window.history && window.history.replaceState) {
+				history.replaceState('data', siteTitle, '#a-propos');
+			}
 		}
 
 		if((scrolled >= contactOT - 20) || scrolled >= siteHeight - (windowHeight + 100)) {
 			setActiveLink(3);
 
-			history.replaceState('data', siteTitle, '#contact');
+			if (window.history && window.history.replaceState) {
+				history.replaceState('data', siteTitle, '#contact');
+			}
 		}
 	}
 
