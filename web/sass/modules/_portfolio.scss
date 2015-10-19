@@ -1,6 +1,7 @@
 .portfolio {
 	&.list {
 		background-color:#cdcdcd;
+
 		@media (min-width: 600px) and (max-width: $screen-xs-max) {
 			.col-xs-12 {
 				width:50%;
