@@ -18,6 +18,27 @@ include '_header.php';
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
+					<span class="img" style="background-image:url('images/portfolio/secondaire-en-spectacle.jpg');"></span>
+					<span class="gradient"></span>
+					<div class="flipper">
+						<div class="front"></div>
+						<div class="description">
+							<div class="dt">
+								<div class="dtr">
+									<div class="dtc">
+										<h2 class="text-center">Secondaire en spectacle<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
+										<p class="text-center">HTML, CSS, JavaScript, Bootstrap, jQuery, Sass et&nbsp;Git</p>
+										<a href="http://www.secondaireenspectacle.qc.ca/" target="_blank"><i class="icon-export"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<article class="item">
+					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/portfolio/st-helie-de-caxton.jpg');"></span>
 					<span class="gradient"></span>
 					<div class="flipper">
@@ -79,7 +100,7 @@ include '_header.php';
 					</div>
 				</article>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/portfolio/elvis-experience.jpg');"></span>
@@ -121,7 +142,7 @@ include '_header.php';
 					</div>
 				</article>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
 				<article class="item">
 					<img src="images/spacer.gif" alt="" height="1" width="1">
 					<span class="img" style="background-image:url('images/portfolio/sushi-taxi.jpg');"></span>
@@ -135,27 +156,6 @@ include '_header.php';
 										<h2 class="text-center">Sushi Taxi<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
 										<p class="text-center">HTML, CSS, JavaScript et&nbsp;jQuery</p>
 										<a href="https://www.sushitaxi.net/" target="_blank"><i class="icon-export"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm hidden-md">
-				<article class="item">
-					<img src="images/spacer.gif" alt="" height="1" width="1">
-					<span class="img" style="background-image:url('images/portfolio/loud-lary-adjust.jpg');"></span>
-					<span class="gradient"></span>
-					<div class="flipper">
-						<div class="front"></div>
-						<div class="description">
-							<div class="dt">
-								<div class="dtr">
-									<div class="dtc">
-										<h2 class="text-center">Loud Lary Ajust<span class="purple-triangle"></span><span class="turquoise-triangle"></span></h2>
-										<p class="text-center">HTML et&nbsp;CSS</p>
-										<a href="http://www.loudlaryajust.com/" target="_blank"><i class="icon-export"></i></a>
 									</div>
 								</div>
 							</div>
